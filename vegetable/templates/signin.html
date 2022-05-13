@@ -1,0 +1,18 @@
+<center>{% extends 'veg.html' %}
+{% block title %}
+<title>signin</title>
+{% endblock title %}
+ {% block head1 %}
+{% load static %}
+{% endblock head1 %}
+{% block content1 %}
+<h2 style="color:red">Enter the details</h2>
+{% endblock content1 %}
+{% block content2 %}
+<form method="POST" >
+ {% csrf_token %}
+ {{form}}
+ <input type="submit" >
+</form>
+
+ {% endblock content2 %}</center>

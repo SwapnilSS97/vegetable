@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fruit_details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{%  static 'js/bootstrap.min.js' %}"></script>
+       <script src="{%  static 'js/jquery.js' %}"></script>
+</head>
+<body>
+<h2 style="color:red">Vegetable/fruit details</h2>
+<form>
+    {% for f in fruits %}
+
+    <div class="card" style="width: 18rem;">
+  <img src="{{f.fruitimage}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{f.fruitname}}</h5>
+    <p class="card-text">{{f.fruitprice}}</p>
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
+</div>
+    {% endfor %}
+</form>
+</body>
+</html>

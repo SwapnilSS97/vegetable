@@ -1,0 +1,21 @@
+<center>{% extends 'veg.html' %}
+{% block title %}
+<title>sign up</title>
+{% endblock title %}
+ {% block head1 %}
+{% load static %}
+{% endblock head1 %}
+{% block content1 %}
+<h2 style="color:red">User Registration</h2>
+{% endblock content1 %}
+{% block content2 %}
+<form method="POST"  novalidate>
+ {% csrf_token %}
+ {% for fm in form  %}
+ {{fm.label_tag}}{{fm}}{{fm.errors}}<br>
+
+ {% endfor %}
+ <input type="submit" value="create user">
+
+</form>
+ {% endblock content2 %}</center>
